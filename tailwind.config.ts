@@ -16,12 +16,12 @@ const config: Config = {
         gray1: "#6A6A86",
         white: "#FFFFFF",
         borderColor: "#E0E0E0",
-        gray:'#F8F8F8'
+        gray: '#F8F8F8'
       },
       fontFamily: {
         poppins: ["var(--font-poppins)", "sans-serif"],
         alice: ["var(--font-alice)", "serif"],
-        bricola: ["var(--font-bricolageGrotesque)", "serif"],
+        bricola: ['var(--font-bricolage)', "serif"],
       },
     },
   },

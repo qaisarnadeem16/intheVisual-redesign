@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Alice, Poppins, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/shared/navbar";
+import Footer from "./components/shared/footer";
 
 // Alice font setup
 const alice = Alice({
@@ -20,7 +21,7 @@ const poppins = Poppins({
 // Bricolage Grotesque font setup
 const bricolageGrotesque = Bricolage_Grotesque({
   weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-bricolage-grotesque",
+  variable: '--font-bricolage',
   subsets: ["latin"],
 });
 
@@ -39,8 +40,9 @@ export default function RootLayout({
       <body
         className={`${alice.variable} ${poppins.variable} ${bricolageGrotesque.variable} antialiased`}
       >
-         <Navbar/>
+        <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );

@@ -9,7 +9,7 @@ const Transform = () => {
         <div className="bg-gray py-10">
             <Section className=''>
                 <div className=''>
-                    <h1 className='text-4xl font-bold text-center py-16'>See the Transformation</h1>
+                    <h1 className='text-5xl lg:text-6xl tracking-tight font-bricola font-normal text-center py-5 lg:py-16'>See the Transformation</h1>
                     <Image src={transform} alt='transform' className='cover' />
 
                     <div className="pb-6 relative">

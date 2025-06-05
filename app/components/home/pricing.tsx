@@ -51,15 +51,15 @@ const PricingSection = () => {
     return (
         <section className="py-16 bg-white">
             <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900">Simple, Transparent Pricing</h2>
-                <p className="text-gray-500 py-6">Choose the package that best fits your business needs and goals.</p>
+                <h2 className="text-[44px] lg:text-6xl tracking-tight font-bricola font-normal">Simple, Transparent Pricing</h2>
+                <p className="md:text-base font-poppins py-6">Choose the package that best fits your business needs and goals.</p>
             </div>
 
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
                 {pricingPlans.map((plan, idx) => (
                     <div
                         key={idx}
-                        className={`p-[2px] rounded-2xl group transition-all duration-300 ${plan.highlighted ? 'bg-gradient-to-r from-[#9B17D0] to-[#C53B08]' : 'bg-transparent'} hover:bg-gradient-to-r hover:from-[#9B17D0] hover:to-[#C53B08]`} // Applied hover gradient to all cards
+                        className={`p-[1px] rounded-2xl group  transition-all duration-300 ${plan.highlighted ? 'bg-gradient-to-r from-[#9B17D0] to-[#C53B08]' : 'bg-transparent'} hover:bg-gradient-to-r hover:from-[#9B17D0] hover:to-[#C53B08]`} // Applied hover gradient to all cards
                     >
                         <div
                             className={`relative rounded-2xl p-6 h-full transition-transform group-hover:scale-105 bg-white shadow ${plan.highlighted ? 'bg-gradient-to-tr from-purple-50 to-pink-50' : ''} group-hover:bg-gradient-to-r group-hover:from-[#e7c6f4] group-hover:to-[#edc5b6]`} // Consistent hover gradient for inner div
