@@ -14,15 +14,21 @@ import Transform from "./components/home/transform";
 export default function Home() {
   return (
     <>
-      <HeroSection/>
-      <Transform/>
-      <ChooseUS/>
-      <SuccessStories/>
-      <PricingSection/>
-      <HowWeWork/>
-      <ReviewCarousel/>
-      <FAQSection/>
-      <GetQuestions/>
+      <HeroSection />
+      <Transform />
+      <ChooseUS />
+      <SuccessStories />
+      <PricingSection />
+      <HowWeWork />
+      <ReviewCarousel />
+      <FAQSection />
+      <GetQuestions
+        heading1="Got Questions?"
+        heading2="We’ve Got Answers!"
+        description="Curious about something? We’re here to clear up any doubts and provide all the details you need. Let us guide you every step of the way!"
+        buttonText="Get Started"
+        buttonLink="/contact"
+      />
     </>
   );
 }

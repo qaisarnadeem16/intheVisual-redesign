@@ -2,31 +2,30 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import Section from '../shared/common/section';
 import Image from 'next/image';
 
-// Define the steps with direct image paths
 const steps = [
   {
-    icon: '/assets/arrow.svg', // Use direct path relative to /public
+    icon: '/assets/award.png', 
     title: 'Personal attention',
     desc: '& expert output.',
     bg: 'bg-purple-500',
     shadow: 'shadow-purple-500/50',
   },
   {
-    icon: '/assets/bag.svg',
+    icon: '/assets/team.png',
     title: '20-person team',
     desc: 'With UI/UX, Shopify Dev, & Integration experts.',
     bg: 'bg-cyan-400',
     shadow: 'shadow-cyan-400/50',
   },
   {
-    icon: '/assets/glob.svg',
+    icon: '/assets/award.png',
     title: 'Proven results',
     desc: 'across US, UK, and EU brands.',
     bg: 'bg-green-400',
     shadow: 'shadow-green-400/50',
   },
   {
-    icon: '/assets/sign.svg',
+    icon: '/assets/signal.png',
     title: 'Fast turnaround',
     desc: 'transparent pricing, no fluff.',
     bg: 'bg-indigo-500',
@@ -54,9 +53,9 @@ export default function HowWeWork() {
               <Image
                 src={step.icon}
                 alt={step.title}
-                width={40} // Set explicit width
-                height={40} // Set explicit height
-                className="object-contain" // Ensure the image fits within the container
+                width={40} 
+                height={40} 
+                className="object-contain" 
               />
             </div>
             <h3 className="text-xl font-poppins font-semibold mt-4">{step.title}</h3>

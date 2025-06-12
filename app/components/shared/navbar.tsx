@@ -24,11 +24,11 @@ const Navbar = () => {
 
     const menuItems: MenuItem[] = [
         { label: "Home", url: "/" },
-        { label: "Services", url: "/services" },
-        { label: "Portfolio", url: "/portfolio" },
+        // { label: "Services", url: "/services" },
+        // { label: "Portfolio", url: "/portfolio" },
         { label: "Pricing", url: "/pricing" },
-        { label: "About Us", url: "/about-us" },
-        { label: "Contact Us", url: "/contact-us" },
+        // { label: "About Us", url: "/about-us" },
+        // { label: "Contact Us", url: "/contact-us" },
     ];
 
     return (

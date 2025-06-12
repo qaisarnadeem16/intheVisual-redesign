@@ -12,28 +12,28 @@ const steps = [
         title: 'Discovery Call',
         desc: 'We understand your business and goals.',
         bg: 'bg-purple-500',
-        shadow: 'shadow-purple-500/50', // Shadow color matching bg-purple-500
+        shadow: 'shadow-purple-500/50', 
     },
     {
         icon: wireframe,
         title: 'Wireframes & Design',
         desc: 'We share mockups before coding.',
         bg: 'bg-cyan-400',
-        shadow: 'shadow-cyan-400/50', // Shadow color matching bg-cyan-400
+        shadow: 'shadow-cyan-400/50', 
     },
     {
         icon: development,
         title: 'Development Phase',
         desc: 'Fully responsive Shopify build.',
         bg: 'bg-green-400',
-        shadow: 'shadow-green-400/50', // Shadow color matching bg-green-400
+        shadow: 'shadow-green-400/50', 
     },
     {
         icon: launch,
         title: 'Launch & Optimize',
         desc: 'Post-launch support and training.',
         bg: 'bg-indigo-500',
-        shadow: 'shadow-indigo-500/50', // Shadow color matching bg-indigo-500
+        shadow: 'shadow-indigo-500/50', 
     },
 ];
 
@@ -48,7 +48,7 @@ export default function HowWeWork() {
                 {steps.map((step, index) => (
                     <div
                         key={index}
-                        className={`flex flex-col items-center p-6 rounded-2xl ${step.shadow} `} // Added shadow and background
+                        className={`flex flex-col items-center p-6 rounded-2xl ${step.shadow} `} 
                     >
                         <div className={`w-16 h-16 flex items-center justify-center rounded-2xl text-white shadow-lg ${step.bg}`}>
                             <Image src={step.icon} alt={step.title} className="h-9 w-9" />

@@ -11,7 +11,7 @@ const ReviewCarousel = () => {
             id: 1,
             text: '"It was great. Thank you Visual, hopefully we will have a chance to work again in the future."',
             rating: 5,
-            image: man, // Replace with actual image path
+            image: man, 
             name: 'Linur Chubaev',
             title: 'Founder at Eloqnt',
         },
@@ -19,7 +19,7 @@ const ReviewCarousel = () => {
             id: 2,
             text: '"Amazing service! Highly recommend Visual for any project needs."',
             rating: 4,
-            image: man, // Replace with actual image path
+            image: man, 
             name: 'Jane Doe',
             title: 'CEO at Example Co.',
         },
@@ -27,7 +27,7 @@ const ReviewCarousel = () => {
             id: 3,
             text: '"Excellent work and great communication. Will definitely collaborate again!"',
             rating: 5,
-            image: man, // Replace with actual image path
+            image: man, 
             name: 'John Smith',
             title: 'Founder at TechStart',
         },
@@ -37,20 +37,20 @@ const ReviewCarousel = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3, // Default for large screens
+        slidesToShow: 3, 
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
         arrows: true,
         responsive: [
             {
-                breakpoint: 1024, // md and below
+                breakpoint: 1024, 
                 settings: {
                     slidesToShow: 2,
                 },
             },
             {
-                breakpoint: 768, // sm and below
+                breakpoint: 768, 
                 settings: {
                     slidesToShow: 1,
                 },

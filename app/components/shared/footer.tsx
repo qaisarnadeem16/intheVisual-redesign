@@ -39,7 +39,7 @@ const CustomLink: React.FC<CustomLinkProps> = ({
 };
 
 const Footer: React.FC = () => {
-    // Navigation links
+ 
     const quickLinks = [
         { id: 1, label: 'Home', href: '/' },
         { id: 2, label: 'About Us', href: '/about' },
@@ -48,9 +48,9 @@ const Footer: React.FC = () => {
     ];
 
     const contactInfo = {
-        address: '123, 456789',
-        phone: '+1234567890',
-        email: 'visuals.com',
+        address: '1942 Broadway St. STE 314C Boulder CO 80302 US',
+        phone: '+923472779429',
+        email: 'salesinquiry@inthevisual.org',
     };
 
     const termsPolicies = [
@@ -63,7 +63,6 @@ const Footer: React.FC = () => {
         <footer className="bg-gray-50 py-8 font-poppins">
             <Section className=" px-4">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    {/* Logo and Description */}
                     <div className="flex flex-col items-start">
                         <div className="w-32 mb-4">
                             <Link href="/">
@@ -78,29 +77,28 @@ const Footer: React.FC = () => {
                                 />
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-600">
-                            Lorem ipsum dummy text <br /> lorem ipsum dummy text
+                        <p className="text-sm font-medium font-poppins">
+                            Create Your In <br /> The Visual Experience
                         </p>
                         <div className="mt-4">
                             <p className="text-sm text-gray-600">Follow us on:</p>
-                            <div className="flex space-x-4 mt-2">
-                                <Link href="https://facebook.com" aria-label="Facebook">
+                            <div className="flex space-x-3 mt-2">
+                                <Link target="_blank" href="https://www.facebook.com/share/19rpZnYtv2/?mibextid=wwXIfr" aria-label="Facebook">
                                     <FaFacebookF className="text-gray-600 hover:text-blue-900 transition" />
                                 </Link>
-                                <Link href="https://instagram.com" aria-label="Instagram">
+                                <Link target="_blank" href="https://www.instagram.com/in_the_visual?igsh=dGpibjJubHljYTky" aria-label="Instagram">
                                     <FaInstagram className="text-gray-600 hover:text-blue-900 transition" />
                                 </Link>
-                                <Link href="https://linkedin.com" aria-label="LinkedIn">
+                                <Link target="_blank" href="https://www.linkedin.com/company/inthevisualcommerce/posts/?feedView=all" aria-label="LinkedIn">
                                     <FaLinkedinIn className="text-gray-600 hover:text-blue-900 transition" />
                                 </Link>
-                                <Link href="https://youtube.com" aria-label="YouTube">
+                                {/* <Link target="_blank" href="https://youtube.com" aria-label="YouTube">
                                     <FaYoutube className="text-gray-600 hover:text-blue-900 transition" />
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                     </div>
 
-                    {/* Quick Links */}
                     <div>
                         <h3 className="text-lg font-semibold mb-4">QUICK LINKS</h3>
                         <ul className="space-y-2">
@@ -116,17 +114,25 @@ const Footer: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* Contact Us */}
                     <div>
                         <h3 className="text-lg font-semibold mb-4">CONTACT US</h3>
-                        <ul className="space-y-2">
-                            <li className="text-sm text-gray-600">Address: {contactInfo.address}</li>
-                            <li className="text-sm text-gray-600">Phone: {contactInfo.phone}</li>
-                            <li className="text-sm text-gray-600">Email: {contactInfo.email}</li>
+                        <ul className="space-y-2 text-sm text-gray-600">
+                            <li><strong>Address:</strong> {contactInfo.address}</li>
+                            <li>
+                                <strong>Phone:</strong>{' '}
+                                <a href={`tel:${contactInfo.phone}`} className="hover:text-blue-900 transition">
+                                    {contactInfo.phone}
+                                </a>
+                            </li>
+                            <li>
+                                <strong>Email:</strong>{' '}
+                                <a href={`mailto:${contactInfo.email}`} className="hover:text-blue-900 transition">
+                                    {contactInfo.email}
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
-                    {/* Terms and Policies */}
                     <div>
                         <h3 className="text-lg font-semibold mb-4">TERMS AND POLICIES</h3>
                         <ul className="space-y-2">

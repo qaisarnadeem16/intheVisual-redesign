@@ -1,4 +1,4 @@
-// components/PricingSection.tsx
+import Link from 'next/link';
 import React from 'react';
 
 const pricingPlans = [
@@ -59,10 +59,10 @@ const PricingSection = () => {
                 {pricingPlans.map((plan, idx) => (
                     <div
                         key={idx}
-                        className={`p-[1px] rounded-2xl group  transition-all duration-300 ${plan.highlighted ? 'bg-gradient-to-r from-[#9B17D0] to-[#C53B08]' : 'bg-transparent'} hover:bg-gradient-to-r hover:from-[#9B17D0] hover:to-[#C53B08]`} // Applied hover gradient to all cards
+                        className={`p-[1px] rounded-2xl group  transition-all duration-300 ${plan.highlighted ? 'bg-gradient-to-r from-[#9B17D0] to-[#C53B08]' : 'bg-transparent'} hover:bg-gradient-to-r hover:from-[#9B17D0] hover:to-[#C53B08]`}
                     >
                         <div
-                            className={`relative rounded-2xl p-6 h-full transition-transform group-hover:scale-105 bg-white shadow ${plan.highlighted ? 'bg-gradient-to-tr from-purple-50 to-pink-50' : ''} group-hover:bg-gradient-to-r group-hover:from-[#e7c6f4] group-hover:to-[#edc5b6]`} // Consistent hover gradient for inner div
+                            className={`relative rounded-2xl p-6 h-full transition-transform group-hover:scale-105 bg-white shadow ${plan.highlighted ? 'bg-gradient-to-tr from-purple-50 to-pink-50' : ''} group-hover:bg-gradient-to-r group-hover:from-[#e7c6f4] group-hover:to-[#edc5b6]`}
                         >
                             {plan.highlighted && (
                                 <div className="absolute top-3 right-3 my-2 bg-purple-100 text-purple-600 text-xs font-semibold px-2 py-1 rounded-full">
@@ -91,7 +91,9 @@ const PricingSection = () => {
                             </ul>
 
                             <div className="pt-6">
-                                <button className='bg-[#504CEC] text-white hover:bg-blue-900 hover:transition-all hover:duration-300 hover:scale-105 rounded-full px-5 py-2'>Choose Plan</button>
+                                <Link href={'/pricing'}>
+                                    <button className='bg-[#504CEC] text-white hover:bg-blue-900 hover:transition-all hover:duration-300 hover:scale-105 rounded-full px-5 py-2'>Choose Plan</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

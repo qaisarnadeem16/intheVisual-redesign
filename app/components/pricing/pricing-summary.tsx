@@ -58,7 +58,7 @@ const PricingSummary = () => {
 
   return (
     <div className="py-16 bg-[#f8f8f87d]">
-      <div className="container max-w-6xl border border-[#DDDDDD] mx-auto p-6 bg-white rounded-2xl shadow-lg">
+      <div className="container  max-w-6xl border border-[#DDDDDD] mx-auto p-6 bg-white rounded-2xl shadow-lg">
         <h2 className="md:text-6xl text-3xl max-w-5xl py-6 mx-auto font-bricola text-center text-black mb-6">
           Updated Pricing Summary For Shopify Packages (Small Agency)
         </h2>
