@@ -20,14 +20,14 @@ const steps = [
   {
     icon: '/assets/award.png',
     title: 'Proven results',
-    desc: 'across US, UK, and EU brands.',
+    desc: 'Across US, UK, and EU brands.',
     bg: 'bg-green-400',
     shadow: 'shadow-green-400/50',
   },
   {
     icon: '/assets/signal.png',
     title: 'Fast turnaround',
-    desc: 'transparent pricing, no fluff.',
+    desc: 'Transparent pricing, No fluff.',
     bg: 'bg-indigo-500',
     shadow: 'shadow-indigo-500/50',
   },
@@ -45,7 +45,7 @@ export default function HowWeWork() {
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`flex flex-col items-center p-6 rounded-2xl ${step.shadow}`}
+            className={`flex flex-col transition-all duration-100 hover:scale-105 ease-in-out cursor-pointer items-center p-6 rounded-2xl ${step.shadow}`}
           >
             <div
               className={`w-16 h-16 flex items-center justify-center rounded-2xl text-white shadow-lg ${step.bg}`}

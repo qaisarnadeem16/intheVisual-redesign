@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomLink from '../shared/common/custom-link';
 
 const PricingSummary = () => {
   const plans = [
@@ -58,14 +59,14 @@ const PricingSummary = () => {
 
   return (
     <div className="py-16 bg-[#f8f8f87d]">
-      <div className="container  max-w-6xl border border-[#DDDDDD] mx-auto p-6 bg-white rounded-2xl shadow-lg">
-        <h2 className="md:text-6xl text-3xl max-w-5xl py-6 mx-auto font-bricola text-center text-black mb-6">
+      <div className="container group hover:text-white hover:bg-gradient-to-r hover:from-[#9B17D0] hover:to-[#C53B08] transition-all duration-300  max-w-6xl border border-[#DDDDDD] mx-auto p-6 bg-white rounded-2xl shadow-lg">
+        <h2 className="md:text-6xl group-hover:text-white text-3xl max-w-5xl py-6 mx-auto font-bricola text-center text-black mb-6">
           Updated Pricing Summary For Shopify Packages (Small Agency)
         </h2>
-        <div className="overflow-x-auto">
-          <table className="w-full font-poppins text-left border-collapse">
+        <div className="overflow-x-auto group-hover:text-white">
+          <table className="w-full group-hover:text-white font-poppins text-left border-collapse">
             <thead>
-              <tr className="bg-gray-100">
+              <tr className="bg-gray-100 group-hover:text-white">
                 <th className="p-4 font-semibold font-poppins">Plan</th>
                 {plans.map((plan) => (
                   <th key={plan.name} className="p-4 font-semibold font-poppins">
@@ -75,88 +76,92 @@ const PricingSummary = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="border-t border-[#d3d0ea]">
-                <td className="p-4 font-medium text-[#66637B]">Price</td>
+              <tr className="border-t group-hover:text-white border-[#d3d0ea]">
+                <td className="p-4 group-hover:text-white font-medium text-[#66637B]">Price</td>
                 {plans.map((plan) => (
-                  <td key={plan.name} className="p-4 text-[#66637B]">
+                  <td key={plan.name} className="p-4 group-hover:text-white text-[#66637B]">
                     {plan.price}
                   </td>
                 ))}
               </tr>
               <tr className="border-t border-[#d3d0ea]">
-                <td className="p-4 font-medium text-[#66637B]">Best For</td>
+                <td className="p-4 group-hover:text-white font-medium text-[#66637B]">Best For</td>
                 {plans.map((plan) => (
-                  <td key={plan.name} className="p-4 text-[#66637B]">
+                  <td key={plan.name} className="p-4 group-hover:text-white text-[#66637B]">
                     {plan.bestFor}
                   </td>
                 ))}
               </tr>
               <tr className="border-t border-[#d3d0ea]">
-                <td className="p-4 font-medium text-[#66637B]">Pages</td>
+                <td className="p-4 group-hover:text-white font-medium text-[#66637B]">Pages</td>
                 {plans.map((plan) => (
-                  <td key={plan.name} className="p-4 text-[#66637B]">
+                  <td key={plan.name} className="p-4 group-hover:text-white text-[#66637B]">
                     {plan.pages}
                   </td>
                 ))}
               </tr>
               <tr className="border-t border-[#d3d0ea]">
-                <td className="p-4 font-medium text-[#66637B]">Products</td>
+                <td className="p-4 group-hover:text-white font-medium text-[#66637B]">Products</td>
                 {plans.map((plan) => (
-                  <td key={plan.name} className="p-4 text-[#66637B]">
+                  <td key={plan.name} className="p-4 group-hover:text-white text-[#66637B]">
                     {plan.products}
                   </td>
                 ))}
               </tr>
               <tr className="border-t border-[#d3d0ea]">
-                <td className="p-4 font-medium text-[#66637B]">Design</td>
+                <td className="p-4 group-hover:text-white font-medium text-[#66637B]">Design</td>
                 {plans.map((plan) => (
-                  <td key={plan.name} className="p-4 text-[#66637B]">
+                  <td key={plan.name} className="p-4 group-hover:text-white text-[#66637B]">
                     {plan.design}
                   </td>
                 ))}
               </tr>
               <tr className="border-t border-[#d3d0ea]">
-                <td className="p-4 font-medium text-[#66637B]">Custom Features</td>
+                <td className="p-4 group-hover:text-white font-medium text-[#66637B]">Custom Features</td>
                 {plans.map((plan) => (
-                  <td key={plan.name} className="p-4 text-[#66637B]">
+                  <td key={plan.name} className="p-4 group-hover:text-white text-[#66637B]">
                     {plan.customFeatures}
                   </td>
                 ))}
               </tr>
               <tr className="border-t border-[#d3d0ea]">
-                <td className="p-4 font-medium text-[#66637B]">Apps Setup</td>
+                <td className="p-4 group-hover:text-white font-medium text-[#66637B]">Apps Setup</td>
                 {plans.map((plan) => (
-                  <td key={plan.name} className="p-4 text-[#66637B]">
+                  <td key={plan.name} className="p-4 group-hover:text-white text-[#66637B]">
                     {plan.appsSetup}
                   </td>
                 ))}
               </tr>
               <tr className="border-t border-[#d3d0ea]">
-                <td className="p-4 font-medium text-[#66637B]">SEO</td>
+                <td className="p-4 group-hover:text-white font-medium text-[#66637B]">SEO</td>
                 {plans.map((plan) => (
-                  <td key={plan.name} className="p-4 text-[#66637B]">
+                  <td key={plan.name} className="p-4 group-hover:text-white text-[#66637B]">
                     {plan.seo}
                   </td>
                 ))}
               </tr>
               <tr className="border-t border-[#d3d0ea]">
-                <td className="p-4 font-medium text-[#66637B]">Support</td>
+                <td className="p-4 group-hover:text-white font-medium text-[#66637B]">Support</td>
                 {plans.map((plan) => (
-                  <td key={plan.name} className="p-4 text-[#66637B]">
+                  <td key={plan.name} className="p-4 group-hover:text-white text-[#66637B]">
                     {plan.support}
                   </td>
                 ))}
               </tr>
-              <tr className="border-t border-[#d3d0ea]">
-                <td className="p-4 font-medium text-[#66637B]">Delivery</td>
+              <tr className="border-t group-hover:text-white border-[#d3d0ea]">
+                <td className="p-4 group-hover:text-white font-medium text-[#66637B]">Delivery</td>
                 {plans.map((plan) => (
-                  <td key={plan.name} className="p-4 text-[#66637B]">
+                  <td key={plan.name} className="p-4 group-hover:text-white text-[#66637B]">
                     {plan.delivery}
                   </td>
                 ))}
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <div className="flex group justify-end py-5">
+          <CustomLink href='/'>Get Started</CustomLink>
         </div>
       </div>
     </div>

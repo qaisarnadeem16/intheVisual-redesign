@@ -1,51 +1,52 @@
 import Link from 'next/link';
 import React from 'react';
+import CustomLink from '../shared/common/custom-link';
 
-const pricingPlans = [
-    {
-        title: 'Essential',
-        price: '$19',
-        frequency: '/Single',
-        description: 'Perfect for small businesses getting started',
-        features: [
-            'Shopify theme',
-            'Mobile responsive',
-            '5 custom page Designs',
-            'Basic SEO setup',
-            '30 days of support',
-        ],
-        highlighted: false,
-    },
-    {
-        title: 'Professional',
-        price: '$54',
-        frequency: '/Half',
-        description: 'For established businesses seeking growth',
-        features: [
-            'Custom Shopify theme',
-            'Advanced responsive',
-            '10 custom page',
-            'Advanced SEO',
-            'Custom checkout',
-            '60 days of support',
-        ],
-        highlighted: false,
-    },
-    {
-        title: 'Enterprise',
-        price: '$89',
-        frequency: '/Full',
-        description: 'For large businesses with complex needs',
-        features: [
-            'Fully custom Shopify',
-            'Premium responsive',
-            'Unlimited custom page',
-            'Custom app',
-            'ERP/CRM integrations',
-        ],
-        highlighted: true,
-    },
-];
+// const pricingPlans = [
+//     {
+//         title: 'Essential',
+//         price: '$19',
+//         frequency: '/Single',
+//         description: 'Perfect for small businesses getting started',
+//         features: [
+//             'Shopify theme',
+//             'Mobile responsive',
+//             '5 custom page Designs',
+//             'Basic SEO setup',
+//             '30 days of support',
+//         ],
+//         highlighted: false,
+//     },
+//     {
+//         title: 'Professional',
+//         price: '$54',
+//         frequency: '/Half',
+//         description: 'For established businesses seeking growth',
+//         features: [
+//             'Custom Shopify theme',
+//             'Advanced responsive',
+//             '10 custom page',
+//             'Advanced SEO',
+//             'Custom checkout',
+//             '60 days of support',
+//         ],
+//         highlighted: false,
+//     },
+//     {
+//         title: 'Enterprise',
+//         price: '$89',
+//         frequency: '/Full',
+//         description: 'For large businesses with complex needs',
+//         features: [
+//             'Fully custom Shopify',
+//             'Premium responsive',
+//             'Unlimited custom page',
+//             'Custom app',
+//             'ERP/CRM integrations',
+//         ],
+//         highlighted: true,
+//     },
+// ];
 
 const PricingSection = () => {
     return (
@@ -53,9 +54,13 @@ const PricingSection = () => {
             <div className="text-center mb-12">
                 <h2 className="text-[44px] lg:text-6xl tracking-tight font-bricola font-normal">Simple, Transparent Pricing</h2>
                 <p className="md:text-base font-poppins py-6">Choose the package that best fits your business needs and goals.</p>
+                <CustomLink href='/pricing' className=''>
+                    Explore Our Plans
+                    
+                </CustomLink>
             </div>
 
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+            {/* <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
                 {pricingPlans.map((plan, idx) => (
                     <div
                         key={idx}
@@ -98,7 +103,7 @@ const PricingSection = () => {
                         </div>
                     </div>
                 ))}
-            </div>
+            </div> */}
         </section>
     );
 };

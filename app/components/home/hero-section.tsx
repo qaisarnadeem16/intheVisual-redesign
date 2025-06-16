@@ -3,26 +3,55 @@ import Image from 'next/image';
 import Section from '../shared/section';
 import SubHeading from '../shared/common/sub-heading';
 import CustomLink from '../shared/common/custom-link';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { CallIcon } from '@/app/svg';
 
 export default function HeroSection() {
     const partners = [
-        '/assets/partners/p1.png',
-        '/assets/partners/p2.png',
-        '/assets/partners/p3.png',
-        '/assets/partners/p4.png',
-        '/assets/partners/p5.png',
-        '/assets/partners/p1.png',
-        '/assets/partners/p2.png',
-        '/assets/partners/p3.png',
-        '/assets/partners/p4.png',
-        '/assets/partners/p5.png',
-        '/assets/partners/p1.png',
-        '/assets/partners/p2.png',
-        '/assets/partners/p3.png',
-        '/assets/partners/p4.png',
-        '/assets/partners/p5.png',
+        '/assets/partners/barnlight.webp',
+        '/assets/partners/knockout.webp',
+        '/assets/partners/sport.webp',
+        '/assets/partners/kwikgoal.webp',
+        '/assets/partners/pkgpal.webp',
+        '/assets/partners/pleaser.webp',
+        '/assets/partners/msp.webp',
+        '/assets/partners/crew.webp',
+        '/assets/partners/danpex.webp',
+        '/assets/partners/equifit.webp',
+        '/assets/partners/gold.webp',
+        '/assets/partners/self.webp',
+        '/assets/partners/reggel.webp',
+        '/assets/partners/print.webp',
+        '/assets/partners/splash.webp',
+        '/assets/partners/kinetic.webp',
     ]
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 600,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    };
     return (
         <Section className="">
             {/* Header Section */}
@@ -38,10 +67,10 @@ export default function HeroSection() {
                             Transform
                             <span
                                 className="absolute left-0 bottom-0 h-1 w-full rounded-full"
-                                // style={{
-                                //     background:
-                                //         "linear-gradient(90deg, #9B17D0 0%, #C53B08 100%)",
-                                // }}
+                            // style={{
+                            //     background:
+                            //         "linear-gradient(90deg, #9B17D0 0%, #C53B08 100%)",
+                            // }}
                             />
                             <svg width="339" height="9" viewBox="0 0 339 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2.19925 7.00001C55.3236 4.48688 196.67 0.214548 337.062 3.23031" stroke="url(#paint0_linear_109_422)" stroke-width="3" stroke-linecap="round" />
@@ -80,19 +109,21 @@ export default function HeroSection() {
 
 
             <div className="py-10">
-                <div className="max-w-4xl mx-auto pb-10">
-                    <SubHeading >
-                        partnered with exceptional brands and agencies worldwide
+                <div className="max-w-4xl mx-auto">
+                    <SubHeading className='!text-black font-poppins font-medium'>
+                        Companies with exceptional brands and agencies worldwide
                     </SubHeading>
                 </div>
                 <div className="relative ">
-                    <div className="slider py-5">
-                        <div className="slide-track">
-                            {partners.map((company, i) => (
-                                <div key={i} className="">
-                                    <Image src={company} alt="" width={20} height={20} unoptimized className="md:w-full w-3/4 md:px-16 px-0 " />
-                                </div>
-                            ))}
+                    <div className="">
+                        <div className="overflow-hidden">
+                            <Slider {...settings}>
+                                {partners.map((company, i) => (
+                                    <div key={i} className="">
+                                        <Image src={company} alt="" width={100} height={100} unoptimized className="md:w-full  md:px-10 px-0 " />
+                                    </div>
+                                ))}
+                            </Slider>
                         </div>
                     </div>
                 </div>
