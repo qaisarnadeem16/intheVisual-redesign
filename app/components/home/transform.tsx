@@ -10,7 +10,7 @@ const Transform = () => {
             <Section className=''>
                 <div className=''>
                     <h1 className='text-5xl lg:text-6xl tracking-tight font-bricola font-normal text-center py-5 lg:py-16'>See the Transformation</h1>
-                    <Image src={transform} alt='transform' className='cover' />
+                    <Image src={transform} alt='transform' className='cover mx-auto' unoptimized />
 
                     <div className="pb-6 relative">
                         <div className="h-[10px] rounded-full max-w-md mx-auto bg-[#D1D5DB]"></div>

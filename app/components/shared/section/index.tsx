@@ -9,7 +9,7 @@ const Section = ({
 }) => {
   return (
     <div
-      className={`5xl:max-w-[1800px]  w-full xl:px-24 lg:px-16 mx-auto px-5 py-5 ${className || ""
+      className={`5xl:max-w-[1600px]  w-full xl:px-24 lg:px-16 mx-auto px-5 py-5 ${className || ""
         }`}
     >
       {children}
