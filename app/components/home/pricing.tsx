@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import CustomLink from '../shared/common/custom-link';
+import Section from '../shared/common/section';
 
 // const pricingPlans = [
 //     {
@@ -50,7 +51,7 @@ import CustomLink from '../shared/common/custom-link';
 
 const PricingSection = () => {
     return (
-        <section className="py-16 bg-white">
+        <Section className="py-16 bg-white">
             <div className="text-center mb-12">
                 <h2 className="text-[44px] lg:text-6xl tracking-tight font-bricola font-normal">Simple, Transparent Pricing</h2>
                 <p className="md:text-base font-poppins py-6">Choose the package that best fits your business needs and goals.</p>
@@ -104,7 +105,7 @@ const PricingSection = () => {
                     </div>
                 ))}
             </div> */}
-        </section>
+        </Section>
     );
 };
 

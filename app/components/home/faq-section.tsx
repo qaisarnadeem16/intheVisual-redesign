@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Section from '../shared/common/section';
 
 interface FAQItemProps {
     question: string;
@@ -58,7 +59,7 @@ const FAQSection: React.FC = () => {
     ];
 
     return (
-        <section className="py-16 bg-white ">
+        <Section className="py-16 bg-white ">
             <div className="max-w-5xl mx-auto md:px-6 px-2">
                 <h2 className="text-5xl lg:text-6xl text-center tracking-tight font-bricola font-normal">Got Questions?</h2>
                 <h3 className="text-[44px] lg:text-6xl text-center tracking-tight font-bricola font-normal">We’ve Got Answers!</h3>
@@ -71,7 +72,7 @@ const FAQSection: React.FC = () => {
                     ))}
                 </div>
             </div>
-        </section>
+        </Section>
     );
 };
 

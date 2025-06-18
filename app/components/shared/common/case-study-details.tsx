@@ -1,7 +1,7 @@
 'use client';
 import { caseStudies } from '@/data/caseStudies';
 import CustomLink from './custom-link';
-import overview from '/public/assets/overview.png'
+import overview from '/public/assets/overview-section.jpg'
 import Image from 'next/image';
 import Section from './section';
 
@@ -46,29 +46,31 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ slug }) => {
         <>
             <div>
                 <div className="py-12">
-                    <Section>
-                        <div className="max-w-6xl mx-auto">
-                            <CustomLink href="/" className={` hover:text-white text-base mb-4 group `}>
-                                Case Studies &gt; <span className={`text-[#060635] font-bricola  hover:text-white`}>{caseStudy.name}</span>
-                            </CustomLink>
 
-                            <div className="grid grid-cols-1 py-8 items-center md:grid-cols-2 ">
-                                <div className="">
-                                    <Image src={overview} alt='overview' className='' />
-                                </div>
-                                <div className="">
-                                    <p className='font-bricola text-3xl'>Project Overview</p>
-                                    <p className={`text-lg font-poppins font-normal text-[#6A6A86]`}>{caseStudy.overview.content}</p>
+                    <div className="bg-gradient-to-bl py-14 from-[#ebc8ba] via-[#d3d3eb] to-[#bbbad5]">
+                        <Section>
+                            <div className="max-w-6xl mx-auto">
+                                {/* <CustomLink href="/" className={` hover:text-white text-base mb-4 group `}>
+                                Case Studies &gt; <span className={`text-[#060635] font-bricola  hover:text-white`}>{caseStudy.name}</span>
+                            </CustomLink> */}
+
+                                <div className="grid grid-cols-1 gap-5 md:gap-16 items-center md:grid-cols-2 ">
+                                    <div className="md:order-2 order-1 flex items-center justify-center">
+                                        <Image src={overview} alt='overview' className='rounded w-4/5 h-auto' />
+                                    </div>
+                                    <div className="space-y-2 md:space-y-6 order-2 md:order-1 ">
+                                        <p className='font-bricola text-3xl md:text-6xl'>Project Overview</p>
+                                        <p className={`text-lg font-poppins font-normal text-[#6A6A86]`}>{caseStudy.overview.content}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </Section>
-
+                        </Section>
+                    </div>
                     <div className="py-10 bg-gray">
                         <Section>
                             <div className="max-w-6xl mx-auto justify-center">
                                 <div className="text-center py-10">
-                                    <h2 className={`text-6xl font-bricola font-normal `}>{caseStudy.challenge.title}</h2>
+                                    <h2 className={`md:text-6xl text-4xl font-bricola font-normal `}>{caseStudy.challenge.title}</h2>
                                 </div>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-6 items-center justify-center">
@@ -86,10 +88,11 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ slug }) => {
                         </Section>
                     </div>
 
-                    <div className="py-6 text-center max-w-6xl mx-auto">
-                        <Section>
-                            <div className="py-6">
-                                <h2 className={`text-6xl font-bricola font-normal`}>{caseStudy.solution.title}</h2>
+
+                    <div className=" py-0 max-w-6xl mx-auto">
+                        <Section className='!py-0'>
+                            <div className="py-6 text-center ">
+                                <h2 className={`md:text-6xl text-4xl font-bricola font-normal`}>{caseStudy.solution.title}</h2>
                                 <p className="text-base font-poppins max-w-3xl mx-auto py-2 text-[#6A6A86] font-normal">
                                     See how we've helped these businesses transform their online presence and achieve remarkable results.
                                 </p>
@@ -98,7 +101,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ slug }) => {
                                 {caseStudy.solution.steps.map((step: any, index: number) => (
                                     <div
                                         key={index}
-                                        className="rounded-2xl p-6 border-2 border-dashed"
+                                        className="rounded-2xl p-4 md:p-6 border-2 border-dashed"
                                         style={{
                                             borderColor: index % 2 === 0 ? '#D9B8FF' : '#F5A09D'
                                         }}
@@ -120,22 +123,29 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ slug }) => {
                                     </div>
                                 ))}
                             </div>
-
                             {caseStudy.solution.key_features && (
-                                <div className="py-10 text-center">
-                                    <h3 className={`text-6xl font-bricola py-3`}>Key Features</h3>
-                                    <ul className="text-base">
+                                <div className="py-7 flex flex-col gap-2 items-center justify-center">
+                                    <h3 className={`md:text-6xl text-4xl font-bricola py-3`}>Key Features</h3>
+                                    <ul className="md:text-base text-sm flex flex-col py-4 gap-2 justify-center">
                                         {caseStudy.solution.key_features.map((feature: string, i: number) => (
-                                            <li key={i}>{feature}</li>
+                                            <li key={i} className="flex items-start gap-4">
+                                                <span className="">
+                                                    <svg width="24" height="25" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M24.9375 15.8126C24.0625 20.1876 20.7638 24.3071 16.135 25.2276C13.8775 25.6772 11.5357 25.403 9.44303 24.4443C7.35037 23.4855 5.61354 21.8909 4.47984 19.8876C3.34615 17.8843 2.87338 15.5744 3.12887 13.2868C3.38435 10.9991 4.35506 8.85042 5.90278 7.14658C9.07728 3.65008 14.4375 2.68758 18.8125 4.43758" stroke="#504CEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M10.0625 14.0625L14.4375 18.4375L24.9375 7.0625" stroke="#504CEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                <span>{feature}</span>
+                                            </li>
                                         ))}
                                     </ul>
                                 </div>
                             )}
 
                             {caseStudy.solution.tech_stack && (
-                                <div className="py-10 text-center">
-                                    <h3 className={`text-6xl font-bricola py-3`}>Tech Stack</h3>
-                                    <ul className="text-base  py-3 text-gray-700">
+                                <div className="py-7 text-center justify-center flex flex-col items-center">
+                                    <h3 className={`md:text-6xl text-4xl font-bricola py-3`}>Tech Stack</h3>
+                                    <ul className="text-base text-start space-y-1  py-3 text-gray-700">
                                         <li><strong>Frontend:</strong> {caseStudy.solution.tech_stack.frontend.join(', ')}</li>
                                         <li><strong>Backend:</strong> {caseStudy.solution.tech_stack.backend.join(', ')}</li>
                                         <li><strong>Integrations:</strong> {caseStudy.solution.tech_stack.integrations.join(', ')}</li>
@@ -144,20 +154,28 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ slug }) => {
                             )}
 
                             {caseStudy.solution.execution_process && (
-                                <div className="py-10 text-center">
-                                    <h3 className={`text-6xl font-bricola mb-3 `}>Execution Process</h3>
-                                    <ul className="text-base font-poppins text-[#6A6A86] font-normal">
+                                <div className="py-7 md:text-center flex flex-col md:items-center">
+                                    <h3 className={`md:text-6xl text-4xl font-bricola mb-3 `}>Execution Process</h3>
+                                    <ul className="md:text-base text-sm py-3 font-poppins text-[#6A6A86] font-normal">
                                         {caseStudy.solution.execution_process.map((process: string, i: number) => (
-                                            <li key={i}>{process}</li>
+                                            <li key={i} className="flex md:items-start gap-2">
+                                                <span className="">
+                                                    <svg width="24" height="25" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M24.9375 15.8126C24.0625 20.1876 20.7638 24.3071 16.135 25.2276C13.8775 25.6772 11.5357 25.403 9.44303 24.4443C7.35037 23.4855 5.61354 21.8909 4.47984 19.8876C3.34615 17.8843 2.87338 15.5744 3.12887 13.2868C3.38435 10.9991 4.35506 8.85042 5.90278 7.14658C9.07728 3.65008 14.4375 2.68758 18.8125 4.43758" stroke="#504CEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M10.0625 14.0625L14.4375 18.4375L24.9375 7.0625" stroke="#504CEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                <span>{process}</span>
+                                            </li>
                                         ))}
                                     </ul>
                                 </div>
                             )}
 
                             {caseStudy.solution.software_render_engines && (
-                                <div className="py-10 text-center">
-                                    <h3 className={`text-5xl font-bricola mb-3 `}>Software & Render Engines</h3>
-                                    <ul className="text-base font-poppins text-[#6A6A86] font-normal">
+                                <div className="py-6 text-center flex flex-col md:items-center">
+                                    <h3 className={`md:text-6xl text-4xl font-bricola mb-3 `}>Software & Render Engines</h3>
+                                    <ul className="text-base py-3 font-poppins text-[#6A6A86] font-normal">
                                         <li><strong>Modeling & Animation:</strong> {caseStudy.solution.software_render_engines.modeling_animation}</li>
                                         <li><strong>Rendering Environment:</strong> {caseStudy.solution.software_render_engines.rendering_environment}</li>
                                         <li><strong>Render Engines:</strong> {caseStudy.solution.software_render_engines.render_engines.join(', ')}</li>
@@ -168,24 +186,32 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ slug }) => {
                     </div>
 
 
-                    <div className="py-6 max-w-6xl mx-auto">
+                    <div className="py-3 max-w-6xl mx-auto">
                         <Section>
                             <div>
-                                <h2 className="text-6xl text-center font-bricola">
+                                <h2 className="md:text-6xl text-4xl text-center font-bricola">
                                     {caseStudy.results.title}
                                 </h2>
                             </div>
 
-                            <div className="text-center flex flex-col items-center gap-4 py-4">
-                                <ul className="text-lg font-poppins text-[#6A6A86] font-normal">
+                            <div className="md:text-center flex flex-col md:items-center md:justify-center gap-4 py-4">
+                                <ul className="md:text-lg space-y-1 text-sm font-poppins text-[#6A6A86] font-normal">
                                     {caseStudy.results.points.map((point: any, index: any) => (
-                                        <li key={index}>{point}</li>
+                                        <li key={index} className='flex md:items-center gap-2'>
+                                            <span>
+                                                <svg width="24" height="25" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M24.9375 15.8126C24.0625 20.1876 20.7638 24.3071 16.135 25.2276C13.8775 25.6772 11.5357 25.403 9.44303 24.4443C7.35037 23.4855 5.61354 21.8909 4.47984 19.8876C3.34615 17.8843 2.87338 15.5744 3.12887 13.2868C3.38435 10.9991 4.35506 8.85042 5.90278 7.14658C9.07728 3.65008 14.4375 2.68758 18.8125 4.43758" stroke="#504CEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M10.0625 14.0625L14.4375 18.4375L24.9375 7.0625" stroke="#504CEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <span>{point}</span>
+                                        </li>
                                     ))}
                                 </ul>
 
-                            
+
                                 {(caseStudy.results.image || caseStudy.results.final_video) && (
-                                    <div className="py-5">
+                                    <div className="py-3">
 
                                         {caseStudy.results.image && (
                                             <Image

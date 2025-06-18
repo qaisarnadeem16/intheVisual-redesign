@@ -1,5 +1,5 @@
 import GetQuestions from "@/app/components/home/get-question";
-import CaseHeroSection from "@/app/components/shared/common/case-hero-section";
+// import CaseHeroSection from "@/app/components/shared/common/case-hero-section";
 import CaseStudyDetail from "@/app/components/shared/common/case-study-details";
 
 
@@ -12,7 +12,7 @@ const CaseStudyPage = async ({ params }: PageProps) => {
 
     return (
         <div>
-            <CaseHeroSection/>
+            {/* <CaseHeroSection/> */}
             <CaseStudyDetail slug={slug} />
             <GetQuestions
                 heading1="Call to Action"

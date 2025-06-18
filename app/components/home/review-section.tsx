@@ -6,6 +6,7 @@ import Image from 'next/image';
 import printlogo from '/public/assets/testimonial/printlogo.png';
 import menlogo from '/public/assets/testimonial/menlogo.jpeg';
 import prolevlogo from '/public/assets/testimonial/prolevlogo.jpg';
+import Section from '../shared/common/section';
 
 const ReviewCarousel = () => {
     const reviews = [
@@ -81,49 +82,51 @@ const ReviewCarousel = () => {
 
     return (
         <div className="py-10 overflow-hidden bg-gray-100">
-            <div className="max-w-7xl mx-auto px-4">
-                <h2 className="md:text-6xl text-3xl max-w-xl mx-auto font-bricola text-center mb-8">
-                    Our Clients Experiences with Us
-                </h2>
-                <Slider {...settings}>
-                    {reviews.map((review) => (
-                        <div key={review.id} className="p-4">
-                            <div className="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto h-[270px] flex flex-col justify-between">
-                                <p className="text-gray-700 mb-4 italic flex-grow">"{review.text}"</p>
-                                <div className="flex items-center mb-4">
-                                    {renderStars(review.rating)}
-                                </div>
-                                <div className="flex items-center">
-                                    <Image
-                                        src={review.image}
-                                        alt={`${review.name}'s profile`}
-                                        width={48}
-                                        height={48}
-                                        className="w-12 h-12 rounded-full mr-4"
-                                    />
-                                    <div>
-                                        <p className="text-gray-900 font-semibold">{review.name}</p>
-                                        {review.title && (
-                                            <p className="text-gray-600 text-sm">{review.title}</p>
-                                        )}
-                                        {review.url && (
-                                            <a
-                                                href={`https://${review.url}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-blue-600 text-sm hover:underline"
-                                                aria-label={`Visit ${review.name}'s website`}
-                                            >
-                                                {review.url}
-                                            </a>
-                                        )}
+            <Section>
+                <div className="max-w-7xl mx-auto px-4">
+                    <h2 className="md:text-6xl text-3xl max-w-xl mx-auto font-bricola text-center mb-8">
+                        Our Clients Experiences with Us
+                    </h2>
+                    <Slider {...settings}>
+                        {reviews.map((review) => (
+                            <div key={review.id} className="p-4">
+                                <div className="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto h-[270px] flex flex-col justify-between">
+                                    <p className="text-gray-700 mb-4 italic flex-grow">"{review.text}"</p>
+                                    <div className="flex items-center mb-4">
+                                        {renderStars(review.rating)}
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Image
+                                            src={review.image}
+                                            alt={`${review.name}'s profile`}
+                                            width={48}
+                                            height={48}
+                                            className="w-12 h-12 rounded-full mr-4"
+                                        />
+                                        <div>
+                                            <p className="text-gray-900 font-semibold">{review.name}</p>
+                                            {review.title && (
+                                                <p className="text-gray-600 text-sm">{review.title}</p>
+                                            )}
+                                            {review.url && (
+                                                <a
+                                                    href={`https://${review.url}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-blue-600 text-sm hover:underline"
+                                                    aria-label={`Visit ${review.name}'s website`}
+                                                >
+                                                    {review.url}
+                                                </a>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </Slider>
-            </div>
+                        ))}
+                    </Slider>
+                </div>
+            </Section>
         </div>
     );
 };

@@ -3,6 +3,7 @@ import shopify from '/public/assets/shopify.png';
 import grow from '/public/assets/grow.png';
 import requirement from '/public/assets/requirement.png';
 import Image from "next/image";
+import Section from "../shared/common/section";
 
 const cardData = [
   {
@@ -27,8 +28,8 @@ const cardData = [
 
 const ChooseUS = () => {
   return (
-    <section className="py-20 bg-white text-center">
-      <div className="container mx-auto px-4">
+    <Section className="py-20 bg-white text-center">
+      <div className="max-w-7xl mx-auto px-4">
 
         <div className="md:py-10">
           <h2 className="text-5xl lg:text-6xl tracking-tight font-bricola font-normal">Why Choose In The Visual</h2>
@@ -38,7 +39,7 @@ const ChooseUS = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {cardData.map((card, index) => (
             <div key={index} className="flex flex-col transition-all duration-300 ease-in-out transform hover:scale-105 items-center">
 
@@ -60,7 +61,7 @@ const ChooseUS = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
