@@ -41,14 +41,6 @@ export const stories: Story[]  = [
       slug: "kinetik-adrenalinx",
     },
     // {
-    //   title: "Medallion Rug",
-    //   description:
-    //     "We unified Medallion Rug Gallery’s two websites into a single, performance-optimized WordPress/WooCommerce platform. With advanced filtering and a 'Request for Price' flow, customers enjoy a seamless luxury shopping experience. The result? Faster load times and increased inquiries.",
-    //   imageSrc: bakery,
-    //   imageAlt: "Medallion Rug",
-    //   slug: "medallion-rug",
-    // },
-    // {
     //   title: "Bamboo Organizer",
     //   description:
     //     "We created a high-quality 3D animation for a sustainable bamboo organizer, highlighting its eco-friendly appeal and durability. Tailored for Amazon, the animation showcased the product in a realistic setting, driving client satisfaction and additional project commissions.",
@@ -73,3 +65,46 @@ export const stories: Story[]  = [
     //   slug: "realistic-cinematic-animation",
     // },
   ];
+
+
+
+  // data/wordpressFeatures.ts
+
+export const wordpressFeatures = [
+  {
+    icon: '🖥️',
+    text: 'Custom, scalable WordPress solutions',
+  },
+  {
+    icon: '🛡️',
+    text: 'Secure, fast-loading sites',
+  },
+  {
+    icon: '📱',
+    text: 'Fully mobile-responsive',
+  },
+  {
+    icon: '📊',
+    text: 'SEO & Analytics ready',
+  },
+  {
+    icon: '🔄',
+    text: 'Easy to manage backend',
+  },
+  {
+    icon: '🧩',
+    text: 'Plugin integrations & eCommerce options',
+  },
+];
+
+
+export const wordPressSuccessStory=[
+      {
+      title: "Medallion Rug",
+      description:
+        "We unified Medallion Rug Gallery’s two websites into a single, performance-optimized WordPress/WooCommerce platform. With advanced filtering and a 'Request for Price' flow, customers enjoy a seamless luxury shopping experience. The result? Faster load times and increased inquiries.",
+      imageSrc: bakery,
+      imageAlt: "Medallion Rug",
+      slug: "medallion-rug",
+    },
+]

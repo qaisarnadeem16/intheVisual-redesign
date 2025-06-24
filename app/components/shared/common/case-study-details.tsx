@@ -194,10 +194,10 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ slug }) => {
                                 </h2>
                             </div>
 
-                            <div className="md:text-center flex flex-col md:items-center md:justify-center gap-4 py-4">
+                            <div className="flex flex-col md:items-center md:justify-center gap-4 py-4">
                                 <ul className="md:text-lg space-y-1 text-sm font-poppins text-[#6A6A86] font-normal">
                                     {caseStudy.results.points.map((point: any, index: any) => (
-                                        <li key={index} className='flex md:items-center gap-2'>
+                                        <li key={index} className='flex  gap-2'>
                                             <span>
                                                 <svg width="24" height="25" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M24.9375 15.8126C24.0625 20.1876 20.7638 24.3071 16.135 25.2276C13.8775 25.6772 11.5357 25.403 9.44303 24.4443C7.35037 23.4855 5.61354 21.8909 4.47984 19.8876C3.34615 17.8843 2.87338 15.5744 3.12887 13.2868C3.38435 10.9991 4.35506 8.85042 5.90278 7.14658C9.07728 3.65008 14.4375 2.68758 18.8125 4.43758" stroke="#504CEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
