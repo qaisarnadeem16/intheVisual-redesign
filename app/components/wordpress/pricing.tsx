@@ -59,7 +59,7 @@ const PricingSection = () => {
     return (
         <section className="py-16 px-4 bg-white text-center">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl font-bold mb-12">Pricing</h2>
+                <h2 className="md:text-6xl text-4xl font-bricola mb-12">Pricing</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {plans.map((plan, index) => (
                         <div

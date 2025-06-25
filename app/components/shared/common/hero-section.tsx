@@ -12,8 +12,8 @@ import { CallIcon } from '@/app/svg';
 interface HeroSectionProps {
     title: string;
     subtitle: string;
-    title2:string;
-    title3:string;
+    title2: string;
+    title3: string;
     buttonText: string;
     buttonLink?: string;
 }
@@ -57,11 +57,17 @@ export default function HeroSection({
         responsive: [
             {
                 breakpoint: 1024,
-                settings: { slidesToShow: 4 },
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                },
             },
             {
                 breakpoint: 768,
-                settings: { slidesToShow: 1 },
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
             },
         ],
     };
@@ -130,7 +136,7 @@ export default function HeroSection({
                     <Slider {...settings}>
                         {partners.map((company, i) => (
                             <div key={i}>
-                                <Image src={company} alt={`Partner ${i}`} width={100} height={100} unoptimized className="md:w-full md:px-10 px-0" />
+                                <Image src={company} alt={`Partner ${i}`} height={100} width={100} unoptimized className="md:w-full !flex justify-center items-center md:px-10 px-0" />
                             </div>
                         ))}
                     </Slider>

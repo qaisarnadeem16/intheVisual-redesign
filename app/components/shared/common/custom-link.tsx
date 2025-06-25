@@ -17,7 +17,7 @@ const CustomLink: React.FC<LinkWithIconProps> = ({
       href={href}
       className={`inline-block rounded-full bg-gradient-to-r from-[#9B17D0] to-[#C53B08] p-[1px] transition duration-300 hover:scale-100 ${className}`}
     >
-      <span className="bg-white rounded-full px-6 lg:py-3 py-1 text-black font-medium flex items-center gap-2 hover:bg-transparent hover:text-white transition">
+      <span className="md:bg-white rounded-full px-6 lg:py-3 py-3 text-black font-medium flex jus items-center gap-2 hover:bg-transparent hover:text-white transition">
         {children}
       </span>
     </Link>

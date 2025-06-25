@@ -8,7 +8,7 @@ import Image from 'next/image';
 const WordPressFeaturesSection = () => {
     return (
         <Section className="py-10 px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl text-center lg:text-6xl py-4 tracking-wider leading-normal font-bricola font-normal">
+            <h2 className="text-[28px] text-center lg:text-6xl py-4 md:tracking-wider md:leading-normal font-bricola font-normal">
                 Why Choose inthevisual  <br /> for WordPress
             </h2>
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 items-center lg:py-10 py-5 lg:px-10">
