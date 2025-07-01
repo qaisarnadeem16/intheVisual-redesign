@@ -36,7 +36,7 @@ const SuccessStory: React.FC<SuccessStoryProps> = ({
                             className={`w-full ${imagePosition === 'right' ? 'md:order-1 md:pr-10' : 'md:order-2 md:pl-10'
                                 } text-left mt-8 md:mt-0`}
                         >
-                            <h2 className="text-4xl lg:text-6xl py-5 tracking-tight font-bricola font-normal">{title}</h2>
+                            <h2 className="text-4xl  py-5 tracking-tight font-bricola font-normal">{title}</h2>
                             <p className="text-[#6A6A86] font-poppins mb-6">{description}</p>
                             <div className="inline-block p-[1px] my-7 rounded-full bg-gradient-to-r from-[#9B17D0] to-[#C53B08]">
                                 <Link href={`/case-studies/${slug}`} className='group '>
